@@ -1,0 +1,10 @@
+CREATE DATABASE IF NOT EXISTS bd_categoria;
+CREATE DATABASE IF NOT EXISTS bd_producto;
+CREATE DATABASE IF NOT EXISTS bd_cliente;
+CREATE DATABASE IF NOT EXISTS bd_pedido;
+
+-- Perfil dev (parte final del lab)
+CREATE DATABASE IF NOT EXISTS bd_categoria_dev;
+CREATE DATABASE IF NOT EXISTS bd_producto_dev;
+CREATE DATABASE IF NOT EXISTS bd_cliente_dev;
+CREATE DATABASE IF NOT EXISTS bd_pedido_dev;

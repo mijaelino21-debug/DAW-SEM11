@@ -1,0 +1,414 @@
+{
+  "info": {
+    "name": "Lab S11-B Microservicios",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "1 Categoria (8082)",
+      "item": [
+        {
+          "name": "POST Laptops",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8082/api/categorias"
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Laptops\",\n  \"estado\": \"ACTIVO\"\n}"
+            }
+          }
+        },
+        {
+          "name": "POST Accesorios",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8082/api/categorias"
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Accesorios\",\n  \"estado\": \"ACTIVO\"\n}"
+            }
+          }
+        },
+        {
+          "name": "POST Impresoras",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8082/api/categorias"
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Impresoras\",\n  \"estado\": \"ACTIVO\"\n}"
+            }
+          }
+        },
+        {
+          "name": "GET listar",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8082/api/categorias"
+            }
+          }
+        },
+        {
+          "name": "GET por id",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8082/api/categorias/1"
+            }
+          }
+        },
+        {
+          "name": "ERROR 400 (vacío)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8082/api/categorias"
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"\",\n  \"estado\": \"\"\n}"
+            }
+          }
+        },
+        {
+          "name": "ERROR 404",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8082/api/categorias/999"
+            }
+          }
+        },
+        {
+          "name": "PUT actualizar",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8082/api/categorias/3"
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Impresoras 3D\",\n  \"estado\": \"ACTIVO\"\n}"
+            }
+          }
+        },
+        {
+          "name": "DELETE",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8082/api/categorias/3"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "2 Cliente (8081)",
+      "item": [
+        {
+          "name": "POST Juan",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8081/api/clientes"
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Juan\",\n  \"apellidos\": \"Pérez Gómez\",\n  \"direccion\": \"Av. Javier Prado 123, Lima\",\n  \"telefono\": \"987654321\",\n  \"nroDni\": \"12345678\",\n  \"estado\": \"ACTIVO\"\n}"
+            }
+          }
+        },
+        {
+          "name": "POST María",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8081/api/clientes"
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"María\",\n  \"apellidos\": \"Ramírez Torres\",\n  \"direccion\": \"Calle Los Olivos 456\",\n  \"telefono\": \"912345678\",\n  \"nroDni\": \"87654321\",\n  \"estado\": \"ACTIVO\"\n}"
+            }
+          }
+        },
+        {
+          "name": "GET listar",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8081/api/clientes"
+            }
+          }
+        },
+        {
+          "name": "ERROR 400 (DNI inválido)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8081/api/clientes"
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Juan\",\n  \"apellidos\": \"Pérez Gómez\",\n  \"direccion\": \"Av. Javier Prado 123, Lima\",\n  \"telefono\": \"987654321\",\n  \"nroDni\": \"123\",\n  \"estado\": \"ACTIVO\"\n}"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "3 Producto (8083)",
+      "item": [
+        {
+          "name": "POST Laptop Lenovo ThinkPad",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8083/api/productos"
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Laptop Lenovo ThinkPad\",\n  \"precio\": 3500.0,\n  \"stock\": 15,\n  \"categoriaId\": 1\n}"
+            }
+          }
+        },
+        {
+          "name": "POST Mouse Logitech M185",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8083/api/productos"
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Mouse Logitech M185\",\n  \"precio\": 89.9,\n  \"stock\": 50,\n  \"categoriaId\": 2\n}"
+            }
+          }
+        },
+        {
+          "name": "POST Teclado Mecánico Redragon",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8083/api/productos"
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Teclado Mecánico Redragon\",\n  \"precio\": 199.99,\n  \"stock\": 25,\n  \"categoriaId\": 2\n}"
+            }
+          }
+        },
+        {
+          "name": "GET listar",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8083/api/productos"
+            }
+          }
+        },
+        {
+          "name": "ERROR 400 (precio negativo)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8083/api/productos"
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Laptop Lenovo ThinkPad\",\n  \"precio\": -5,\n  \"stock\": 15,\n  \"categoriaId\": 1\n}"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "4 Pedido (8084)",
+      "item": [
+        {
+          "name": "POST pedido 1",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8084/api/pedidos"
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"fecha\": \"2026-06-10\",\n  \"idCliente\": 1,\n  \"total\": 3679.8,\n  \"detalles\": [\n    {\n      \"idProducto\": 1,\n      \"cantidad\": 1,\n      \"precio\": 3500.0\n    },\n    {\n      \"idProducto\": 2,\n      \"cantidad\": 2,\n      \"precio\": 89.9\n    }\n  ]\n}"
+            }
+          }
+        },
+        {
+          "name": "POST pedido 2",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8084/api/pedidos"
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"fecha\": \"2026-06-10\",\n  \"idCliente\": 2,\n  \"total\": 579.78,\n  \"detalles\": [\n    {\n      \"idProducto\": 2,\n      \"cantidad\": 2,\n      \"precio\": 89.9\n    },\n    {\n      \"idProducto\": 3,\n      \"cantidad\": 2,\n      \"precio\": 199.99\n    }\n  ]\n}"
+            }
+          }
+        },
+        {
+          "name": "GET listar",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8084/api/pedidos"
+            }
+          }
+        },
+        {
+          "name": "GET por id",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8084/api/pedidos/1"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
